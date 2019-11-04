@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <h3> This is the start of my child template</h3>
+  <br>
+  <a href="https://realpython.com/primer-on-jinja-templating/">https://realpython.com/primer-on-jinja-templating/</a>
+  <p>My string: {{my_string}}</p>
+  <p>Value from the list: {{my_list[3]}}</p>
+  <p>Loop through the list:</p>
+  <ul>
+    {% for n in my_list %}
+    <li>{{n}}</li>
+    {% endfor %}
+  </ul>
+  <img class="flask1" src="{{ url_for('static', filename='flask.jpg') }}">
+  <img class="flask2" src="{{ url_for('static', filename='shopping.webp') }}">
+  <h3> This is the end of my child template</h3>
+{% endblock %}
